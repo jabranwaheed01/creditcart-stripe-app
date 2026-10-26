@@ -1,0 +1,108 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CreditCart</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <header>
+      <div class="brand">◈ CreditCart</div>
+      <span class="pill">STRIPE TEST MODE</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">YOUR WORKSPACE</p>
+      <h1>Credits that keep<br>you moving.</h1>
+      <p class="muted">
+        Purchase credits or subscribe to Pro.
+        This demo uses Stripe's sandbox only.
+      </p>
+
+      <div class="balance">
+        <span>Available credits</span>
+        <strong id="credits">—</strong>
+        <button id="use">Use 1 credit ↗</button>
+      </div>
+    </section>
+
+    <section class="plans">
+      <article class="plan">
+        <div class="plan-icon">✳</div>
+        <h2>Credit pack</h2>
+        <p class="muted">
+          A one-time top-up. Yours to use whenever.
+        </p>
+
+        <div class="price">$5 <small>one time</small></div>
+
+        <ul>
+          <li>100 credits</li>
+          <li>No subscription</li>
+          <li>Secure hosted checkout</li>
+        </ul>
+
+        <button class="primary" id="buy">
+          Buy 100 credits
+        </button>
+      </article>
+
+      <article class="plan pro">
+        <div class="tag">MOST FLEXIBLE</div>
+        <div class="plan-icon">✦</div>
+        <h2>Pro</h2>
+        <p class="muted">
+          For a steady monthly workflow.
+        </p>
+
+        <div class="price">$10 <small>/ month</small></div>
+
+        <ul>
+          <li>1,000 credits each paid month</li>
+          <li>Manage or cancel in Portal</li>
+          <li>Secure hosted checkout</li>
+        </ul>
+
+        <button class="primary" id="subscribe">
+          Subscribe to Pro
+        </button>
+      </article>
+    </section>
+
+    <section class="actions">
+      <button class="secondary" id="portal">
+        Manage subscription
+      </button>
+
+      <button class="secondary danger" id="refund">
+        Refund Pro subscription
+      </button>
+    </section>
+
+    <section class="history">
+      <div class="history-head">
+        <h2>Recent purchases</h2>
+        <button id="refresh" class="text-btn">
+          Refresh ↻
+        </button>
+      </div>
+
+      <div id="purchases" class="muted">
+        Loading activity…
+      </div>
+    </section>
+
+    <footer>
+      Learning project · Test payments only · No real money is charged
+    </footer>
+
+    <div id="notice" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
